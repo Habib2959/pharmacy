@@ -1,0 +1,21 @@
+.card-box-shadow {
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.53);
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.53);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.53);
+    transition: .3s;
+}
+
+.card-box-shadow:hover {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+.card-text {
+    transition: .3s;
+}
+
+.card-box-shadow:hover .card-text {
+    color: #5294f7;
+}
+

@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.modal-backdrop.show {
+  opacity: .1 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+p {
+  margin: 0 !important;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar {
+  margin: 20px auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="search"]:focus::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+
+.main-font-color {
+  color: #FF5757 !important;
+}
+.btn-check:focus+.btn, .btn:focus {
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.custom-button {
+  color: #FF5757 !important;
+  position: relative;
+  transition: .3s;
+  z-index: 2;
+}
+
+.custom-button:hover {
+  color: #fff !important;
+}
+
+.custom-button::before {
+  position: absolute;
+  content: "";
+  background-color: #FF5757;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 30px;
+  width: 30px;
+  z-index: -1;
+  transition: .3s;
+  border-radius: 50%;
+  opacity: .2;
+}
+
+.custom-button:hover::before {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  opacity: 1;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  border: 1px solid #FF5757 !important;
+  background-color: #FF5757 !important;
+  width: 100%;
+  color: #fff !important;
+  transition: .3s;
+}
+
+.submit-btn:hover {
+  background-color: transparent !important;
+  color: #FF5757 !important;
+}
+
+.close {
+  padding: 0px 10px;
+  border: 0px;
+  background: #ff57579e;
+  transition: .3s;
+}
+
+.close:hover {
+  background: #FF5757;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #FF5757 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(244 94 100 / 25%) !important;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  color: #FF5757;
 }

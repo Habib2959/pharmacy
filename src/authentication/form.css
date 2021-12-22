@@ -1,0 +1,26 @@
+.error-div {
+    color: #fff;
+    background-color: #ff7272;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 3px 15px;
+}
+.card-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+.mode-change{
+    cursor: pointer;
+    color:#D70864;
+    font-weight: 500;
+}
+
+.card-header{
+    background-color: #D70864 !important;
+    color: #fff;
+    border-bottom: none !important;
+}

@@ -1,0 +1,55 @@
+.sidebar {
+    background-image: url(../assets/images/mainbg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 0px 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.sidebar::after {
+    position: absolute;
+    content: "";
+    background: rgb(255, 87, 87);
+    background: linear-gradient(90deg, rgba(255, 87, 87, 1) 0%, rgba(255, 123, 87, 1) 35%, rgba(255, 148, 87, 1) 100%);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .4;
+    z-index: -1;
+}
+
+.fa {
+    margin-right: 10px;
+}
+
+.list-group {
+    align-items: flex-start;
+}
+
+.listItem {
+    list-style: none;
+    padding: 8px 5px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #900000;
+}
+.listItem:hover{
+    color: brown;
+}
+
+.listItem a{
+    color: #900000;
+    transition: .3s;
+}
+.listItem a:hover{
+    color: brown;
+}
+.listItem a:active, .listItem a:focus{
+    color: #FFFAF0;
+}

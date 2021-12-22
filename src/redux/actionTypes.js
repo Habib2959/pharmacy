@@ -1,0 +1,30 @@
+export const VENDOR_CHECK = "VENDOR_CHECK"
+export const ADD_MEDICINE = "ADD_MEDICINE";
+export const SOLD_MEDICINE = "SOLD_MEDICINE";
+export const AUTH_LOADING = "AUTH_LOADING";
+export const AUTH_SUCCESS = "AUTH_SUCCESS";
+export const AUTH_FAILED = "AUTH_FAILED";
+export const AUTH_LOGOUT = "AUTH_LOGOUT"
+// vendor auth
+export const VENDOR_AUTH_LOADING = "VENDOR_AUTH_LOADING";
+export const VENDOR_AUTH_SUCCESS = "VENDOR_AUTH_SUCCESS";
+export const VENDOR_AUTH_FAILED = "VENDOR_AUTH_FAILED";
+export const VENDOR_AUTH_LOGOUT = "VENDOR_AUTH_LOGOUT"
+
+// fetch medicines
+export const FETCH_MEDICINES = "FETCH_MEDICINES"
+export const FETCH_LOADING = "FETCH_LOADING";
+
+// fetch Stores
+export const FETCH_STORE = "FETCH_STORE"
+export const FETCH_STORE_LOADING = "FETCH_STORE_LOADING"
+
+// cart
+export const TOTAL_ITEMS_IN_CART = "TOTAL_ITEMS_IN_CART"
+export const CART_ITEMS = "CART_ITEMS";
+export const RESET_CART = "RESET_CART";
+
+// checkout
+export const CHECKOUT_LOADING = "CHECKOUT_LOADING";
+export const CHECKOUT_SUCCESS = "CHECKOUT_SUCCESS";
+export const CHECKOUT_FAILED = "CHECKOUT_FAILED";

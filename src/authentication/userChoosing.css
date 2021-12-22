@@ -1,0 +1,15 @@
+.userChoose{
+    background-image: url(../assets/images/mainbg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.userChoose h1{
+    color: white;
+    font-size: 100px;
+}
