@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { addingSoldMedicineToFirestore, fetchMedicines } from "../redux/actionCreators";
 import Spinner from "../spinner/Spinner";
 import Table from "./Table";
+import "./adminMedia.css"
 
 
 
@@ -81,14 +82,14 @@ class AllMedicines extends Component {
         return (
             <>
                 {this.props.adminReducer.isLoading ? <Spinner /> :
-                    <>
+                    <div className="px-2">
                         <div className="search-bar">
                             <input
                                 type="search"
                                 onChange={this.handleSearch}
                                 name="searchTerm" 
                                 placeholder="Search the medicine name"
-                                className="form-control w-50" />
+                                className="form-control search-input" />
                         </div>
                         <Table
                             toggleModal={this.toggleModal}
@@ -98,7 +99,7 @@ class AllMedicines extends Component {
                             isOpen={this.state.isOpen}
                             medicineNameInModal={this.state.medicineNameInModal}
                             soldAmount={this.soldAmount} />
-                    </>
+                    </div>
                 }
             </>
         )

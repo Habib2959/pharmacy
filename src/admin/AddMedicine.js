@@ -2,7 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { addMedicineToFirestore } from "../redux/actionCreators";
 import uuid from 'react-uuid';
-import Spinner from "../spinner/Spinner"
+import Spinner from "../spinner/Spinner";
+import "./adminMedia.css"
 
 const mapStateToProps = state => {
     return {
@@ -60,7 +61,7 @@ class AddMedicine extends React.Component {
             <>
                 {
                     this.props.isLoading ? <Spinner /> :
-                        <form onSubmit={this.handleSubmit}>
+                        <form className="pad" onSubmit={this.handleSubmit}>
                             <input
                                 type="text" className="form-control my-3" placeholder="Enter the medicine's name"
                                 name="medicineName" onChange={this.handleChange}

@@ -39,17 +39,37 @@
     cursor: pointer;
     color: #900000;
 }
-.listItem:hover{
+
+.listItem:hover {
     color: brown;
 }
 
-.listItem a{
+.listItem a {
     color: #900000;
     transition: .3s;
 }
-.listItem a:hover{
+
+.listItem a:hover {
     color: brown;
 }
-.listItem a:active, .listItem a:focus{
+
+.listItem a:active, .listItem a:focus {
     color: #FFFAF0;
+}
+.fa-bars{
+    margin: 0px !important;
+    color: #FFFAF0 !important;
+}
+.navbar-toggler{
+    transition: .3s;
+}
+.navbar-toggler:focus {
+    box-shadow: 0px 0px 0 0.15rem #FFFAF0 !important;
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        padding: 15px 20px;
+        height: max-content;
+    }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import './sidebar.css';
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
 import "../firebase";
 import { withRouter } from "react-router-dom";
@@ -9,13 +9,13 @@ import { connect } from "react-redux";
 
 
 const mapStateToProps = state => {
-    return{
+    return {
         currentVendor: state.VendorAuthReducer.currentVendor
     }
 }
 
 const MapDispatchToProps = dispatch => {
-    return{
+    return {
         VendorAuthLogOut: () => dispatch(VendorAuthLogOut())
     }
 }
@@ -24,20 +24,26 @@ const MapDispatchToProps = dispatch => {
 const auth = getAuth();
 
 class Sidebar extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.VendorSignOut = this.VendorSignOut.bind(this)
     }
 
-    VendorSignOut =async () =>{
-       await signOut(auth);       
+    VendorSignOut = async () => {
+        await signOut(auth);
     }
-    render(){
+    render() {
         return (
             <>
-                    <div className="sidebar">
-                        <h2 style={{color:"#FFFAF0"}}>{this.props.currentVendor !== "" ? this.props.currentVendor.shopName: "DashBoard"}</h2>
+                <div className="sidebar navbar-expand-lg">
+                    <div className="d-flex justify-content-between">
+                        <h2 style={{ color: "#FFFAF0" }}>{this.props.currentVendor !== "" ? this.props.currentVendor.shopName : "DashBoard"}</h2>
                         <hr />
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i className="fa fa-bars"></i>
+                        </button>
+                    </div>
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="list-group">
                             <li className="listItem">
                                 <Link to="/admin/dashboard"> <i className="fa fa-plus"></i>Add New Medicine </Link>
@@ -54,9 +60,10 @@ class Sidebar extends React.Component {
                             </li>
                         </ul>
                     </div>
+                </div>
             </>
         )
     }
 }
 
-export default withRouter(connect(mapStateToProps, MapDispatchToProps) (Sidebar)) ;
+export default withRouter(connect(mapStateToProps, MapDispatchToProps)(Sidebar));

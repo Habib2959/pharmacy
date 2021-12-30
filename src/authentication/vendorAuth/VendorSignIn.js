@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import { VendorAuthLoading } from "../../redux/vendorActionCreator";
 import { Link} from "react-router-dom";
 import { vendorCheck } from "../../redux/actionCreators";
+import "../../admin/adminMedia.css";
 
 
 const mapStateToProps = state => {
@@ -57,7 +58,7 @@ class VendorSignIn extends React.Component {
     render() {
         return (
             <>
-                <div className="card-center">
+                <div className="card-center px-2">
                     <div className="card p-3" style={{ width: '50rem', boxShadow: "1px 1px 4px 0px #000" }}>
                         <div className="my-4">
                             <form onSubmit={this.handleSubmit}>

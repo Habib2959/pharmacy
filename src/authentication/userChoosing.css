@@ -13,3 +13,11 @@
     color: white;
     font-size: 100px;
 }
+.userChoose a {
+    color: red !important;
+    font-weight: 600;
+    transition: .3s;
+}
+.userChoose a:hover{
+    color: #fff !important;
+}

@@ -1,0 +1,15 @@
+.search-input{
+    width: 50% !important;
+}
+
+@media (max-width: 600px) {
+    .pad{
+        padding: 0px 20px;
+    }
+    .search-input{
+        width: 100%  !important;
+    }
+    .card-center{
+        background-color: #f0f8ff7a;
+    }
+}
