@@ -63,3 +63,33 @@
     width: 100%;
     height: 8%;
 }
+.margin{
+    margin-left: 1em;
+}
+
+
+@media (max-width: 600px) {
+    .margin{
+        margin-left: 0px !important;
+    }
+    .mobile-list-style:first-child {
+        margin-top: 20px;
+    }
+     .user-name {
+        border-radius: 0px;
+    }
+    .mobile-list-style {
+        position: relative;
+        display: block;
+        padding: 0.5rem 1rem;
+        color: #212529;
+        text-decoration: none;
+        background-color: #fff;
+        border: 1px solid rgba(0,0,0,.125);
+    }
+    .fa-shopping-cart {
+        margin-right: 0px !important;
+        margin-left: 180px;
+    }
+
+}

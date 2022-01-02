@@ -70,23 +70,33 @@ class Header extends React.Component {
                             <Link to="/user">
                                 <img src={Logo} alt="logo" width="50px" />
                             </Link>
+                            <div className="d-block d-sm-none">
+                                <div className="fa fa-shopping-cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+                                    onClick={this.showCartItems}>
+                                    <p className="cart-number">
+                                        {
+                                            this.props.totalItems
+                                        }
+                                    </p>
+                                </div>
+                            </div>
                             <NavbarToggler onClick={this.toggle} />
                             <Collapse isOpen={this.state.isOpen} navbar>
                                 <Nav navbar className="ms-auto" >
                                     {
                                         this.props.currentUser ? (
                                             <>
-                                                <NavItem>
+                                                <NavItem className="mobile-list-style">
                                                     <Link to="/user" className="NavLink" onClick={this.signOut}>Signout</Link>
                                                 </NavItem>
-                                                <NavItem className="ms-3">
+                                                <NavItem className="margin mobile-list-style">
                                                     <Link to="/user/orders" className="NavLink">Orders</Link>
                                                 </NavItem>
-                                                <NavItem className="ms-3 user-name main-font-color">
-                                                    <p className="fw-bold">{this.props.currentUser.displayName}</p>                                                   
+                                                <NavItem className="margin user-name main-font-color mobile-list-style">
+                                                    <p className="fw-bold d-inline-block">{this.props.currentUser.displayName}</p>
                                                     <i className="fa fa-user-circle-o ms-3" />
                                                 </NavItem>
-                                                <NavItem className="ms-3">
+                                                <NavItem className="margin mobile-list-style d-none d-sm-none d-md-block">
                                                     <div className="fa fa-shopping-cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
                                                         onClick={this.showCartItems}>
                                                         <p className="cart-number">
@@ -99,10 +109,10 @@ class Header extends React.Component {
                                             </>
                                         ) : (
                                             <>
-                                                <NavItem>
+                                                <NavItem className="mobile-list-style">
                                                     <Link to="/user/userLogin" className="NavLink">Sign In</Link>
                                                 </NavItem>
-                                                <NavItem className="ms-3">
+                                                <NavItem className="margin mobile-list-style d-none d-sm-none d-md-block">
                                                     <div className="fa fa-shopping-cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
                                                         onClick={this.showCartItems}>
                                                         <p className="cart-number">
@@ -118,6 +128,7 @@ class Header extends React.Component {
 
                                 </Nav>
                             </Collapse>
+
                         </div>
                     </Navbar>
                 </div>
